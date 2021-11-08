@@ -181,11 +181,72 @@ class _MyHomeState extends State<MyHome> {
                           ),
                         ),
                       ),
-                      Text('Button Login'),
+                      SizedBox(
+                        height: 50,
+                      ),
+                      Material(
+                        borderRadius: BorderRadius.circular(50),
+                        elevation: 5,
+                        child: Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            gradient: LinearGradient(
+                              colors: <Color>[
+                                Color(0xffEE8500),
+                                Color(0xffF05D00)
+                              ],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                            ),
+                          ),
+                          child: Material(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.transparent,
+                            child: Center(
+                              child: InkWell(
+                                splashColor: Colors.white,
+                                borderRadius: BorderRadius.circular(50),
+                                onTap: () {},
+                                child: Text(
+                                  'LOGIN',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
-                Text('Register')
+                SizedBox(
+                  height: 50,
+                ),
+                RichText(
+                  text: TextSpan(
+                    text: 'Don\'t have an account? ',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'Register',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xffF17230),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )
